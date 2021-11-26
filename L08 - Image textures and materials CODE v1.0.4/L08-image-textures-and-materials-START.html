@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>L08 - Image textures and materials</title>
+    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+  </head>
+  <!-- I cannot redistribute the image textures because of the textures.com Terms Of Use -->
+  <!-- You can download them for free at the below links -->
+  <!-- Metal plates texture (Albedo and Normal maps) -->
+  <!-- https://www.textures.com/download/pbr0018/133054?q=metal -->
+  <!-- Bricks texture (Albedo and Normal maps) -->
+  <!-- https://www.textures.com/download/pbr0071/133106?q=bricks -->
+  <body>
+    <a-scene>
+      <!-- Asset Management System -->
+      <a-assets>
+        <img id="metal-NRM" src="L08-IMGs/metal-1024-NRM.jpg" />
+      </a-assets>
+      <!-- Light-Blue Box -->
+      <a-box
+        color="#FFFFFF"
+        src="L08-IMGs/metal1.jpg"
+        repeat="1 1"
+        normal-map="#metal-NRM"
+        normal-texture-repeat="1 1"
+        normal-scale="1 -1"
+        roughness="0.5"
+        width="4"
+        height="4"
+        depth="4"
+        position="-2 1.5 -9"
+        scale="-1 1 1"
+      >
+      </a-box>
+      <!-- Brown Box -->
+      <a-box color="#795548" width="4" height="4" depth="4" position="2 1.5 -9">
+      </a-box>
+    </a-scene>
+  </body>
+</html>
