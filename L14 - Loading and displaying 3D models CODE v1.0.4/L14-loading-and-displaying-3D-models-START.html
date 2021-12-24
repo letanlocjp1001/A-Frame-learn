@@ -10,14 +10,31 @@
       <!-- Download and move your 3D models to the ASSETs folder -->
       <a-assets>
         <img id="sky" src="L14-ASSETs/clear-sunny-sky.jpg" />
-        <a-assets-item id="car" src="L14-ASSETs/scene.gltf"></a-assets-item>
+        <a-assets-item id="village" src="L14-ASSETs/scene.gltf"></a-assets-item>
+        <a-assets-item
+          id="car-o"
+          src="L14-ASSETs/mining-dump-truck.obj"
+        ></a-assets-item>
+        <a-assets-item
+          id="car-m"
+          src="L14-ASSETs/mining-dump-truck.mtl"
+        ></a-assets-item>
       </a-assets>
 
       <!-- Sky -->
       <a-sky src="#sky"></a-sky>
-
+      <!-- Camera -->
+      <a-entity position="-4 0 50">
+        <a-camera></a-camera>
+      </a-entity>
       <!-- Car -->
-      <a-entity gltf-model="#car"></a-entity>
+      <a-entity gltf-model="#village"> </a-entity>
+
+      <a-entity
+        obj-model="obj:#car-o; mtl:#car-m"
+        position="-10 0 50"
+        scale="0.01 0.01 0.01"
+      ></a-entity>
     </a-scene>
   </body>
 </html>
